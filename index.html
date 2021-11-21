@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Morguestanc</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./keyframes.css" />
+
+    <script src="./src/jquery.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="terminal">
+        <h1>◈ Morguestanc ◈</h1>
+        <div id="intro"></div>
+
+        <hr />
+
+        <button id="new_game" onclick="init()">
+            <div id="new_game_label">Nouvelle Partie</div>
+        </button>
+
+        <form action="javascript:void(null)">
+            <span id="start">Comment se nomme votre personnage?<input type="text" id="start_input" placeholder=":"></span>
+        </form>
+
+        <span class="game_content"></span>
+
+        <div id="choices_1">
+            <button class="choices" id="c1" onclick="c1_trigger()">1 : Vous attendez que l'on vous retrouve.</button>
+            <button class="choices" id="c2" onclick="c2_trigger()">2 : Vous tentez de vous contruire un abri pour la nuit.</button>
+            <button class="choices" id="c3" onclick="c3_trigger()">3 : Vous paniquez et hurlez pour que les vôtres viennent à vous.</button>
+        </div>
+
+        <div id="copyrights">
+            Copyright © 2021
+            <a href="https://marbrume.forumactif.com">Marbrume</a> Tous droits
+            réservés
+        </div>
+    </div>
+    <script src="./classes.js"></script>
+    <script src="./index.js" defer></script>
+</body>
+
+</html>
