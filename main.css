@@ -3,7 +3,8 @@ body {
     width: 670px;
     height: 1120px;
     margin: 0 auto !important;
-    background-color: #808080;
+    /* background-color: #808080; */
+    background-color: transparent;
     color: white;
     font-family: 'Inconsolata', monospace !important;
     font-weight: 300;
