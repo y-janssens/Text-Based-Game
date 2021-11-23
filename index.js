@@ -1,17 +1,8 @@
-j2 = new Player("Flibert", "Ecuyer", 8, 9, 9, 8, 8, 8, 9, 8, 8, 8, 65);
+//window.onload = init();
 
 intro = fetch("intro.txt")
   .then((response) => response.text())
   .then((text) => (document.getElementById("intro").innerHTML = text));
-
-Object.defineProperty(String.prototype, "capitalize", {
-  value: function () {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-  },
-  enumerable: false,
-});
-
-//window.onload = init();
 
 function init() {
   $("#intro").css("display", "none");
@@ -28,9 +19,8 @@ $(document).ready(function () {
       this.form.submit();
       let j_name = document.getElementById("start_input").value.capitalize();
 
-      j1 = new Player(j_name, "Ecuyer", 9, 10, 8, 8, 8, 8, 9, 8, 8, 8, 60);
-      j1.equipment("Epée", 14, 8);
-      j1.introduce();
+      player = new Character(j_name, "Ecuyer", 9, 10, 8, 8, 8, 8, 9, 8, 8, 2, 60);
+      player.equipment("épée", 14, 8);
 
       document.getElementById("start").innerHTML = "Bienvenue " + j_name + "!";
       $("#start").append(
@@ -38,9 +28,9 @@ $(document).ready(function () {
       );
       $(".game_content").append(
         "<br> Votre compagnie s'est égarée lors d'une patrouille en forêt, vous êtes désormais seul en compagnie de " +
-          j2.name +
+        npc_1.name +
           ", un autre écuyer de deux ans votre cadet. <br><br> Votre équipement se compose d'une " +
-          j1.weapon +
+          player.weapon +
           " et d'un bouclier. La nuit tombe et vous ne disposez ni de vivres, ni d'abri. <br><br> Que faites vous? <br><br>"
       );
       setTimeout(function () {
@@ -51,23 +41,26 @@ $(document).ready(function () {
 });
 
 function c1_trigger() {
+  c1 = document.getElementById('c1').innerHTML;
+  $("#c1").css("display", "none");
   $("#c2").css("display", "none");
   $("#c3").css("display", "none");
-  $(".game_content").append("<br><br>Vous mourrez de froid.");
+  $(".game_content").append(c1.slice(4) + "<br><br>Vous mourrez de froid.");
 }
 
 function c2_trigger() {
+  c2 = document.getElementById('c2').innerHTML;
   $("#c1").css("display", "none");
+  $("#c2").css("display", "none");
   $("#c3").css("display", "none");
-  $(".game_content").append(
-    "<br><br>La tâche est rude mais vous parvenez à construire un feu de camp."
-  );
+  $(".game_content").append(c2.slice(4) + "<br><br>La tâche est rude mais vous parvenez à construire un feu de camp.");
+
 }
 
 function c3_trigger() {
+  c3 = document.getElementById('c3').innerHTML;
   $("#c1").css("display", "none");
   $("#c2").css("display", "none");
-  $(".game_content").append(
-    "<br><br>Vos hurlements attirent une créature inhumaine qui vous déchiquette en quelques instants."
-  );
+  $("#c3").css("display", "none");
+  $(".game_content").append(c3.slice(4) + "<br><br>Vos hurlements attirent une créature inhumaine qui vous déchiquette en quelques instants.");
 }

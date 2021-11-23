@@ -1,4 +1,4 @@
-class Player {
+class Character {
     constructor(name, class_, FOR, END, HAB, CHA, INT, INI, ATT, PAR, TIR, NA, PV ) {
         this.name = name;
         this.class_ = class_;
