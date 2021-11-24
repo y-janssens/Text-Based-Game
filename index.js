@@ -1,8 +1,5 @@
 //window.onload = init();
-
-header = fetch("./src/assets/header.txt")
-  .then((response) => response.text())
-  .then((text) => (document.getElementById("intro").innerHTML = text));
+random_header();
 
 function init() {
   $("#intro").css("display", "none");
@@ -24,7 +21,7 @@ $(document).ready(function () {
 
       document.getElementById("start").innerHTML = "Bienvenue " + j_name + "! <br><br>";
 
-      intro = ReadFile('./src/assets/intro.txt');
+      $(".game_content").append(intro_text_1); 
 
       setTimeout(function () {
         $(".game_content").append(choices_1);

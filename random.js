@@ -21,5 +21,3 @@ function random_event() {
     console.log(event);
   }
 }
-
-//random_event();
