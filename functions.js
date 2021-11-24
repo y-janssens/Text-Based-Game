@@ -17,3 +17,12 @@ function blinker() {
 
   setTimeout(blinker, 1000);
 }
+
+const ReadFile = async file => {
+  const response = await fetch(file)
+  const text = await response.text()  
+  $(".game_content").append( text);
+}
+
+
+
