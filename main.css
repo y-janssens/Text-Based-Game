@@ -2,9 +2,9 @@ body {
     position: absolute;
     width: 670px;
     height: 1120px;
-    margin: 0 auto !important;
-    /* background-color: #808080; */
+    margin: 0 auto !important;    
     background-color: transparent;
+    /* background-color: #808080; */
     color: white;
     font-family: 'Inconsolata', monospace !important;
     font-weight: 300;
@@ -72,6 +72,38 @@ hr {
     z-index: 2;
 }
 
+#player {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#player_name {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#player_panel {
+    position: absolute;
+    width: 375px;
+    height: 500px;
+    margin-top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #3A3A3A;
+    background-color: #0C0C0C;
+    z-index: 4;
+    display: none;
+}
+
+#player_stats {
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 12px;
+}
+
 #intro {
     padding: 20px;
     font-size: 13px;
@@ -79,13 +111,44 @@ hr {
     text-align: justify !important;
 }
 
-#new_game {
-    position: absolute;
-    top: 400px;
+#new_game, #load_game, #settings {
+    position: relative;
+    top: 100px;
     width: 100%;
+    padding-bottom: 35px;
     text-align: center;
     font-size: 25px;    
     z-index: 2;
+}
+
+#games_list {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #3A3A3A;
+    background-color: #0C0C0C;
+    z-index: 4;
+    display: none;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+}
+
+#settings {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: right;
+    font-size: 25px;    
+    z-index: 2;
+    visibility: hidden;
 }
 
 #new_game_label {

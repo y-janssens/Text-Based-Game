@@ -21,18 +21,38 @@
         <div id="intro"></div>
 
         <hr />
+        <button id="player" onclick="panel_toggle()"></button>
+        <div id="player_panel">
+            <button class="close" id="games_close" onclick="panel_close()">✕</button>
+            <div id="player_name"></div>
+            <div id="player_stats"></div>
+            <hr />
+        </div>
 
         <button id="new_game" onclick="init()">
-            <div id="new_game_label">Nouvelle Partie</div>
+            <div id="new_game_label">Nouvelle partie</div>
+        </button>
+
+        <button id="load_game" onclick="load_toggle()">
+            <div id="load_game_label">Charger une partie</div>
+        </button>
+
+        <div id="games_list">
+            <button class="close" onclick="load_close()">✕</button>
+        </div>
+
+        <button id="settings" onclick="set()">
+            <div id="settings_label">☰</div>
         </button>
 
         <form action="javascript:void(null)">
             <span id="start">Comment se nomme votre personnage?<input type="text" id="start_input" placeholder="Ta grand mère la chauve"></span>
         </form>
 
-        <span class="game_content">
+        <span class="game_content" id="game">
             
         </span>
+
 
         <div id="choices_1">
             <button class="choices" id="c1" onclick="c1_trigger()">1 : Vous attendez que l'on vous retrouve.</button>
@@ -41,6 +61,7 @@
         </div>
 
         <div id="copyrights">
+            <hr />
             Copyright © 2021
             <a href="https://marbrume.forumactif.com">Marbrume</a> Tous droits
             réservés

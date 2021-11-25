@@ -8,4 +8,3 @@ let intro_text_1 = "Les ombres grandissantes avaient fini par avaler vos espoirs
 "Mais au fond, ne tentez-vous pas de vous rassurer vous-même?<br><br>" +
 "\"Il va bientôt faire nuit, et la lune ne nous sera d'aucune aide sous ce ciel de plomb. Que devons-nous faire?\"<br><br>" +
 "Que faites-vous?<br><br>"
-
