@@ -3,7 +3,7 @@
 random_header();
 
 function init() {
-  $("#intro").css("display", "none");
+  $("#header").css("display", "none");
   $("#new_game").css("display", "none");
   $("#load_game").css("display", "none");
   $("#settings").css("visibility", "visible");

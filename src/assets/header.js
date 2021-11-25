@@ -6,5 +6,5 @@ function random_header() {
     let headers = [header_text_1, header_text_2]
     let headers_length = Object.keys(headers).length;
     let rand = Math.floor(Math.random() * headers_length);
-    document.getElementById("intro").innerHTML = headers[rand];
+    document.getElementById("header").innerHTML = headers[rand];
 }

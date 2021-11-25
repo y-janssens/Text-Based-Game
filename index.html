@@ -17,11 +17,12 @@
 
 <body>
     <div id="terminal">
-        <h1>◈ Morguestanc ◈</h1>
-        <div id="intro"></div>
 
+        <h1>◈ Morguestanc ◈</h1>
+        <div id="header"></div>
         <hr />
         <button id="player" onclick="panel_toggle()"></button>
+
         <div id="player_panel">
             <button class="close" id="games_close" onclick="panel_close()">✕</button>
             <div id="player_name"></div>
@@ -40,24 +41,24 @@
         <div id="games_list">
             <button class="close" onclick="load_close()">✕</button>
         </div>
-
+        
         <button id="settings" onclick="set()">
             <div id="settings_label">☰</div>
         </button>
 
         <form action="javascript:void(null)">
-            <span id="start">Comment se nomme votre personnage?<input type="text" id="start_input" placeholder="Ta grand mère la chauve"></span>
+            <span id="start">Comment se nomme votre personnage?<input type="text" id="start_input"></span>
         </form>
 
         <span class="game_content" id="game">
-            
         </span>
-
 
         <div id="choices_1">
             <button class="choices" id="c1" onclick="c1_trigger()">1 : Vous attendez que l'on vous retrouve.</button>
-            <button class="choices" id="c2" onclick="c2_trigger()">2 : Vous tentez de vous contruire un abri pour la nuit.</button>
-            <button class="choices" id="c3" onclick="c3_trigger()">3 : Vous paniquez et hurlez pour que les vôtres viennent à vous.</button>
+            <button class="choices" id="c2" onclick="c2_trigger()">2 : Vous tentez de vous contruire un abri pour la
+                nuit.</button>
+            <button class="choices" id="c3" onclick="c3_trigger()">3 : Vous paniquez et hurlez pour que les vôtres
+                viennent à vous.</button>
         </div>
 
         <div id="copyrights">
@@ -66,17 +67,22 @@
             <a href="https://marbrume.forumactif.com">Marbrume</a> Tous droits
             réservés
         </div>
+
     </div>
-    <script src="./src/assets/intro.js"></script>
+
     <script src="./src/assets/header.js"></script>
-    
+    <script src="./src/assets/intro.js"></script>
+    <script src="./src/assets/fork1.js"></script>
+    <script src="./src/assets/fork2.js"></script>
+    <script src="./src/assets/fork3.js"></script>
+    <script src="./src/assets/ending.js"></script>
+
     <script src="./settings.js"></script>
     <script src="./functions.js"></script>
     <script src="./classes.js"></script>
     <script src="./characters.js"></script>
     <script src="./random.js"></script>
     <script src="./index.js"></script>
-
 
 </body>
 
