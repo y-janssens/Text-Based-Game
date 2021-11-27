@@ -2,7 +2,7 @@ body {
     position: absolute;
     width: 670px;
     height: 1120px;
-    margin: 0 auto !important;    
+    margin: 0 auto !important;
     background-color: transparent;
     /* background-color: #808080; */
     color: white;
@@ -53,6 +53,11 @@ hr {
     border-right: none;
 }
 
+#separator {
+    position: relative;
+    text-align: center;
+}
+
 #terminal {
     position: absolute;
     width: 650px;
@@ -75,12 +80,18 @@ hr {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    display: none;
 }
 
 #player_name {
     text-align: center;
     padding-bottom: 10px;
     margin-top: 10px;
+    font-size: 14px;
+}
+
+#player_edit {
+    text-align: center;
     font-size: 14px;
 }
 
@@ -103,17 +114,27 @@ hr {
     font-size: 12px;
 }
 
-#new_game, #load_game {
+#new_game, #load_game, #continue {
     position: relative;
     top: 100px;
     width: 100%;
     padding-bottom: 35px;
     text-align: center;
-    font-size: 25px;    
+    font-size: 25px;
     z-index: 2;
 }
 
-#new_game_label {
+#continue {
+    top: 0px;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+#continue_game {
+    display: none;
+}
+
+#new_game_label, #continue {
     animation: blink 1.25s steps(5, start) infinite;
 }
 
@@ -130,10 +151,27 @@ hr {
     display: none;
 }
 
+.game_slots {
+    position: relative;
+    width: 100%;
+    top: 20%;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
 .close {
     position: absolute;
     top: 5px;
     right: 5px;
+    font-size: 18px;
+}
+
+.edit {
+    position: absolute;
+    top: 5px;
+    left: 5px;
     font-size: 18px;
 }
 
@@ -142,14 +180,38 @@ hr {
     top: 10px;
     right: 10px;
     text-align: right;
-    font-size: 25px;    
-    z-index: 2;
+    font-size: 25px;
+    z-index: 5;
     visibility: hidden;
+}
+
+#settings_label {
+    z-index: 5;
+}
+
+#settings_panel {
+    position: absolute;
+    width: 325px;
+    height: 500px;
+    top: 0px;
+    right: 0px;
+    border: 1px solid #3A3A3A;
+    background-color: #0C0C0C;
+    z-index: 4;
+    display: none;
+}
+
+#settings_title {
+    position: relative;
+    top: 13px;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 7px;
 }
 
 #start {
     position: relative;
-    top: 25px;  
+    top: 25px;
     left: 25px;
     width: 0;
     font-size: 13px;

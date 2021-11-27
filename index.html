@@ -24,8 +24,10 @@
         <button id="player" onclick="panel_toggle()"></button>
 
         <div id="player_panel">
+            <button class="edit" onclick="edit_name()">✎</button>
             <button class="close" id="games_close" onclick="panel_close()">✕</button>
             <div id="player_name"></div>
+
             <div id="player_stats"></div>
             <hr />
         </div>
@@ -40,11 +42,19 @@
 
         <div id="games_list">
             <button class="close" onclick="load_close()">✕</button>
+            <button class="game_slots">Partie 1</button>
+            <button class="game_slots">Partie 2</button>
+            <button class="game_slots">Partie 3</button>
         </div>
-        
+
         <button id="settings" onclick="set()">
-            <div id="settings_label">☰</div>
+            <div id="settings_label">☰</div>            
         </button>
+
+        <div id="settings_panel">
+            <div id="settings_title">Paramètres</div>
+            <hr />
+        </div>
 
         <form action="javascript:void(null)">
             <span id="start">Comment se nomme votre personnage?<input type="text" id="start_input"></span>
@@ -59,6 +69,12 @@
                 nuit.</button>
             <button class="choices" id="c3" onclick="c3_trigger()">3 : Vous paniquez et hurlez pour que les vôtres
                 viennent à vous.</button>
+        </div>
+
+        <div id="continue_game">
+            <button id="continue" onclick="continue_game()">
+                <div id="continue_label">Continuer</div>
+            </button>
         </div>
 
         <div id="copyrights">

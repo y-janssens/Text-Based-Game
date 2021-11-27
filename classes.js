@@ -1,7 +1,6 @@
 class Character {
-    constructor(first_name, last_name, class_, FOR, END, HAB, CHA, INT, INI, ATT, PAR, TIR, NA, PV ) {
-        this.first_name = first_name;
-        this.last_name = last_name;
+    constructor(name, class_, FOR, END, HAB, CHA, INT, INI, ATT, PAR, TIR, NA, PV ) {
+        this.name = name;
         this.class_ = class_;
         this.FOR = FOR;
         this.END = END;
