@@ -50,6 +50,14 @@ h1 {
     text-align: center;
 }
 
+h3 {
+    position: relative;
+    text-align: center;
+    left: -25px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
 hr {
     width: 60%;
     border-top: none;
@@ -118,6 +126,7 @@ hr {
     border: 1px solid #3A3A3A;
     background-color: #0C0C0C;
     z-index: 4;
+    overflow: hidden;
     display: none;
 }
 
@@ -125,6 +134,33 @@ hr {
     text-align: center;
     letter-spacing: -1px;
     font-size: 12px;
+}
+
+#player_stuff {
+    position: relative;
+    width: 100%;
+    height: 26%;
+    padding: 0px 25px 0px 25px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#player_skills {
+    position: relative;
+    width: 100%;
+    height: 21%;
+    padding: 0px 25px 0px 25px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#player_inventory {
+    position: relative;
+    width: 100%;
+    height: 34%;
+    padding: 0px 25px 0px 25px;
+    font-size: 12px;
+    line-height: 16px;
 }
 
 #new_game, #load_game, #continue {
@@ -236,7 +272,7 @@ hr {
     position: absolute;
     top: 100px;
     padding-left: 25px;
-    padding-right: 25px;   
+    padding-right: 25px;
     font-size: 13px;
     text-align: justify !important;
     visibility: hidden;

@@ -49,15 +49,18 @@ class Character {
         "Pv: ", this.PV);
     }
 
-    equipment(weapon, shield, dmg, prot) {
+    equipment(weapon, shield, dmg, prot, head, torso, legs) {
         this.weapon = weapon
         this.shield = shield
+        this.head = head
+        this.torso = torso
+        this.legs = legs
         this.dmg = dmg
         this.prot = prot
 
-        this.dmg = this.dmg + this.roll(8)
+        /* this.dmg = this.dmg + this.roll(8)
         this.prot = this.prot + this.roll(4)
-        return this.dmg, this.prot
+        return this.dmg, this.prot */
     }
 
     attack() {

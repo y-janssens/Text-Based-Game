@@ -35,8 +35,33 @@ function player_panel() {
     " NA:" +
     player.NA +
     " PV:" +
-    player.PV +
-    "<br>";
+    player.PV;
+    
+    document.getElementById("player_stuff").innerHTML = 
+    "<h3>Equipement</h3>"  + 
+    "- " + player.weapon + ": " + player.dmg + "<br>" + 
+    "- " + player.shield + ": " + player.prot + "<br><br>" +
+    "- " + player.head[0] + ": " + player.head[1] + "<br>" + 
+    "- " + player.torso[0] + ": " + player.torso[1] + "<br>" + 
+    "- " + player.legs[0] + ": " + player.legs[1] + "<br>";
+
+    document.getElementById("player_skills").innerHTML = 
+    "<h3>Compétences</h3>" +
+    "- " + "<br>" +
+    "- " + "<br>" +
+    "- " + "<br>" +
+    "- " + "<br>";
+
+    document.getElementById("player_inventory").innerHTML = 
+    "<h3>Inventaire</h3>" +
+    "- " + "<br>" +
+    "- " + "<br>" +
+    "- " + "<br>" +
+    "- " + "<br>" +
+    "- " + "<br>" +
+    "- " + "<br>" +
+    "- " + "<br>" +
+    "- " + "<br>";
 }
 
 function edit_name() {

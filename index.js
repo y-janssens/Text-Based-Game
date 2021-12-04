@@ -1,5 +1,4 @@
 //window.onload = init();
-//window.onload = load_toggle();
 random_header();
 
 function init() {
@@ -19,10 +18,9 @@ $(document).ready(function () {
       let j_name = document.getElementById("start_input").value.capitalize();
 
   //let j_name = "Adam";
-  player = new Character(j_name, "écuyer", 8, 8, 8, 8, 8, 8, 8, 8, 8, 2, 60);
-  player.equipment("épée", "bouclier", 14, 8);
+  player = new Character(j_name, "Ecuyer", 8, 8, 8, 8, 8, 8, 8, 8, 8, 2, 60);
+  player.equipment("Epée", "Bouclier", 14, 16, ["Camail", 6], ["Chemise de mailles", 9], ["Jambières de mailles", 9]);
 
-  //document.getElementById("start").innerHTML = "Bienvenue " + j_name + "! <br><br>";
   document.getElementById("start").innerHTML = "";
   player_panel();
   text_append(intro_text_1);
@@ -35,3 +33,4 @@ $(document).ready(function () {
   }
   });
 });
+
