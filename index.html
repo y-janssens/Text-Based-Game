@@ -20,8 +20,9 @@
 
         <h1>◈ Morguestanc ◈</h1>
         <div id="header"></div>
-        <hr />
+        <hr>
         <button id="player" onclick="panel_toggle()"></button>
+        <hr class="hr2">
 
         <div id="player_panel">
             <button class="edit" onclick="edit_name()">✎</button>
@@ -29,7 +30,7 @@
             <div id="player_name"></div>
 
             <div id="player_stats"></div>
-            <hr />
+            <hr>
         </div>
 
         <button id="new_game" onclick="init()">
@@ -52,12 +53,15 @@
         </button>
 
         <div id="settings_panel">
-            <div id="settings_title">Paramètres</div>
-            <hr />
+            <div id="settings_title">Paramètres<hr></div>
+            <button class="settings_btns">Enregistrer</button>            
+            <button class="settings_btns" id="sound" onclick="sound_toggle()">Son / ON</button>
+            <button class="settings_btns">Options</button>
+            <button class="settings_btns" id="quit" onclick="quit()">Quitter</button>
         </div>
 
-        <form action="javascript:void(null)">
-            <span id="start">Comment se nomme votre personnage?<input type="text" id="start_input"></span>
+        <form action="javascript:void(null)">            
+            <span id="start">Vous êtes un écuyer au service de votre maître, le Chevalier D’estaing-Braillac. Vous et les vôtres enquêtez au nom du Roi sur d’étranges rumeurs survenues dernièrement. Vos pas vous ont conduit jusqu’à Baillendre-sur-Avesnes, petit village sylvestre où un nombre inquiétant de disparitions a poussé le Comte à solliciter l’aide de la couronne.<br/><br/>Quel est votre nom?<input type="text" id="start_input"></span>
         </form>
 
         <span class="game_content" id="game">
@@ -78,7 +82,7 @@
         </div>
 
         <div id="copyrights">
-            <hr />
+            <hr>
             Copyright © 2021
             <a href="https://marbrume.forumactif.com">Marbrume</a> Tous droits
             réservés
@@ -87,11 +91,11 @@
     </div>
 
     <script src="./src/assets/header.js"></script>
-    <script src="./src/assets/intro.js"></script>
-    <script src="./src/assets/fork1.js"></script>
-    <script src="./src/assets/fork2.js"></script>
-    <script src="./src/assets/fork3.js"></script>
-    <script src="./src/assets/ending.js"></script>
+    <script src="./src/assets/story_intro.js" defer></script>
+    <script src="./src/assets/story_main.js"></script>
+    <script src="./src/assets/story_fork1.js"></script>
+    <script src="./src/assets/story_fork2.js"></script>    
+    <script src="./src/assets/story_ending.js"></script>
 
     <script src="./settings.js"></script>
     <script src="./functions.js"></script>

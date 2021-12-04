@@ -49,8 +49,9 @@ class Character {
         "Pv: ", this.PV);
     }
 
-    equipment(weapon, dmg, prot) {
+    equipment(weapon, shield, dmg, prot) {
         this.weapon = weapon
+        this.shield = shield
         this.dmg = dmg
         this.prot = prot
 

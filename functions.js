@@ -3,25 +3,53 @@ window.onload = blinker();
 let panel = false;
 let games = false;
 let settings = false;
+let sound = true;
 //window.onload = panel_toggle();
 //window.onload = load_toggle();
+//window.onload = set();
 
 function player_panel() {
+  $(".hr2").css("visibility", "visible");
   document.getElementById("player").innerHTML = player.name;
-  document.getElementById("player_name").innerHTML = player.name + " - " + player.class_
-      document.getElementById("player_stats").innerHTML = "FOR:" + player.FOR + " END:" + player.END + " HAB:" + player.HAB + " CHA:" + player.CHA + " INT:" + player.INT + " INI:" + player.INI + " ATT:" + player.ATT + " PAR:" + player.PAR + " TIR:" + player.TIR + " NA:" + player.NA + " PV:" + player.PV + "<br>";
+  document.getElementById("player_name").innerHTML =
+    player.name + " - " + player.class_;
+  document.getElementById("player_stats").innerHTML =
+    "FOR:" +
+    player.FOR +
+    " END:" +
+    player.END +
+    " HAB:" +
+    player.HAB +
+    " CHA:" +
+    player.CHA +
+    " INT:" +
+    player.INT +
+    " INI:" +
+    player.INI +
+    " ATT:" +
+    player.ATT +
+    " PAR:" +
+    player.PAR +
+    " TIR:" +
+    player.TIR +
+    " NA:" +
+    player.NA +
+    " PV:" +
+    player.PV +
+    "<br>";
 }
 
 function edit_name() {
-    document.getElementById('player_name').innerHTML = "<form action=\"javascript:void(null)\"><input type=\"text\" id=\"player_edit\"></form>";
-    $("#player_edit").keydown(function (event) {
-      if (event.keyCode == 13) {
-        this.form.submit();
-        player.name = document.getElementById("player_edit").value.capitalize();
-        document.getElementById("player").innerHTML = player.name;
-        player_panel();
-      }
-    });    
+  document.getElementById("player_name").innerHTML =
+    '<form action="javascript:void(null)"><input type="text" id="player_edit"></form>';
+  $("#player_edit").keydown(function (event) {
+    if (event.keyCode == 13) {
+      this.form.submit();
+      player.name = document.getElementById("player_edit").value.capitalize();
+      document.getElementById("player").innerHTML = player.name;
+      player_panel();
+    }
+  });
 }
 
 Object.defineProperty(String.prototype, "capitalize", {
@@ -47,7 +75,7 @@ function text_append(game_content) {
 
 function separator() {
   let game = document.getElementById("game");
-  game.innerHTML += "<div id=\"separator\">◈</div>";
+  game.innerHTML += '<div id="separator">◈</div>';
 }
 
 function append_continue() {
@@ -96,9 +124,23 @@ function load_close() {
 function set() {
   if (settings == false) {
     settings = true;
-    $('#settings_panel').css('display', 'block');
+    $("#settings_panel").css("display", "block");
   } else {
     settings = false;
-    $('#settings_panel').css('display', 'none');
+    $("#settings_panel").css("display", "none");
   }
+}
+
+function sound_toggle() {
+  if (sound) {
+    sound = false;
+    document.getElementById("sound").innerHTML = "Son / OFF";
+  } else {
+    sound = true;
+    document.getElementById("sound").innerHTML = "Son / ON";
+  }
+}
+
+function quit() {
+  location.reload();
 }
