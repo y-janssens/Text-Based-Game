@@ -17,7 +17,7 @@ $(document).ready(function () {
       this.form.submit();
       let j_name = document.getElementById("start_input").value.capitalize();
 
-  //let j_name = "Adam";
+  //let j_name = ["Jontrivandouèle Bergstern d'Aloy"];
   player = new Character(j_name, "Ecuyer", 8, 8, 8, 8, 8, 8, 8, 8, 8, 2, 60);
   player.equipment("Epée", "Bouclier", 14, 16, ["Camail", 6], ["Chemise de mailles", 9], ["Jambières de mailles", 9]);
 
